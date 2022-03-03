@@ -24,9 +24,14 @@ function draw(){
 		grid[i].show();
 	}
 	current.visited = true;
+	current.highlight();
+	//korak 1 izbor  njakljucnega soseda
 	var next = current.checkNeighbors();  //next-naslednja celica/sosed
 	if (next){
 		next.visited = true;
+	//korak 3 odstranitev zidu med trenutno in naslednjo celico
+	removeWalls(current,next);
+		
 		current = next;
 	}
 }
@@ -76,7 +81,14 @@ function Cell(i, j){
 			return undefined;
 		}
 	}
-
+	
+	this.highlight = function(){
+		var x = this.i*w;
+		var y = this.j*w;
+		noStroke();
+		fill(0, 0, 255, 100);
+		rect(x, y, w, w);
+	}
 
 	this.show = function() {
 		var x = this.i*w;
@@ -95,6 +107,7 @@ function Cell(i, j){
 		line(x  ,y+w  ,x  ,y  );  //dol do gor LEVO (naupicno)
 		}
 		if (this.visited){
+		noStroke();
 		fill(255,0,255,100);
 		rect(x,y,w,w);
 		}
