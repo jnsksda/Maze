@@ -1,27 +1,21 @@
-<!doctype html>
-    <head>
-        <meta charset="utf-8">
-        <title>LABIRINT</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-		
-        <link rel="shortcut icon" sizes="32x32" href="slike/favicon.png">
-     
-    </head>
-     <body onload="onLoad();">
-		
-        <div id="main">
-            
-                <canvas id="canvas" oncontextmenu="return false;"></canvas>
+<!DOCTYPE HTML>
+<html>
 
-                  
-                    <div id="timer_box">
-                        <span id="tajmer_title">Timer</span><br>
-                        <span id="tajmer">00:00</span>
-                    </div>
-             
+<head>
+    <title>Labirint</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="style" />
+	<link rel='ICON' href="slike/favicon.png" />
+	
+</head>
+
+<body>
+    <div id="main">
+	<h1>Labirint</h1>
+        <div id="center">
+            <canvas id="canvas" width="500" height="500" onclick="draw(event)"></canvas>
+            <script src="js/izris.js"></script>
         </div>
-    <script src = "js/script.js"></script>
-    
-  
-    </body>
+    </div>
+</body>
+
 </html>

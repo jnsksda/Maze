@@ -1,0 +1,41 @@
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../slike/bg.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#canvas {
+    width: 70vh;
+}
+
+#center {
+    position: relative;
+    top: 10vh;
+    margin: 0 auto;
+    width: 70vh;
+    height: 70vh;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(0, 0, 0);
+}
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+	color: #cef3ff;
+	padding-top: 50px;
+	font-size: 45px;
+}
