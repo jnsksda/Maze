@@ -365,6 +365,9 @@ function labirint() {
     ctx.strokeStyle = "#1d72c5";
     ctx.stroke();
 }
+
+
+
 //spremenljivke
 var y = 0;
 var x = 118;
@@ -376,12 +379,13 @@ var interval = setInterval(drawIt, 7);
 function drawIt() {
     ctx.fillStyle = "#cef3ff";
     if (nar == 1) {
-
         ctx.fillRect(x, y, 3, 3);
-
         labirint();
 
-    
+    }else if(nar==2){
+		ctx.clearRect(x,y,3,3);   
+		labirint();
+
     }
     if (x==118&&y>=0&&y<=20)
         y+=dy;
@@ -546,5 +550,18 @@ function drawIt() {
 	if (x==132&&y>=226&&y<=250)
         y+=dy;
 	
+	if(x==132&&y==250){
+		x=118;
+		y=0;
+		if(nar==1){
+			nar++;
+		}
+	}
     
 }
+
+
+
+function osvezi(){
+    window.location.reload();
+} 

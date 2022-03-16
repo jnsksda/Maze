@@ -39,3 +39,21 @@ h1 {
 	padding-top: 50px;
 	font-size: 45px;
 }
+
+#osv {
+ 
+	text-align: center;
+    font-family: sans-serif;
+	color: #cef3ff;
+	font-size: 15px;
+	display: flex-center;
+	background-color: #1d72c5;
+	border-radius: 2px;
+	border: 4px double #cef3ff;
+	padding: 7px;
+	width: 120px;
+	cursor: pointer;
+	margin: auto;
+	margin-top:7px;
+	display: grid;
+}
