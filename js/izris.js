@@ -1,6 +1,8 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.scale(2, 2);
+var slikca = new Image();
+slikca.src = "slike/favicon.png";
 
 function labirint() {
 
@@ -374,7 +376,7 @@ var x = 118;
 var nar = 1;
 var dx = 1;
 var dy = 1;
-var interval = setInterval(drawIt, 7);
+var interval = setInterval(drawIt, 2);
 
 function drawIt() {
     ctx.fillStyle = "#cef3ff";
@@ -383,7 +385,8 @@ function drawIt() {
         labirint();
 
     }else if(nar==2){
-		ctx.clearRect(x,y,3,3);   
+		ctx.clearRect(x - 8, y - 8, 15, 15);   
+		ctx.drawImage(slikca, x-1, y-1, 7, 7);
 		labirint();
 
     }
@@ -556,6 +559,10 @@ function drawIt() {
 		if(nar==1){
 			nar++;
 		}
+		else {
+            ctx.clearRect(x, y, 2, 2);
+            nar++;
+        }
 	}
     
 }
